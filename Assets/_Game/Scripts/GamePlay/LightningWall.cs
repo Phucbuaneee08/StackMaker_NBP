@@ -36,6 +36,7 @@ public class LightningWall : MonoBehaviour
    private IEnumerator PlayAgain()
     {
         SoundManager.Instance.PlaySound(Sound.Lose);
+        SoundManager.Instance.StopSound();
         UIManager.Instance.OpenLoseUI();
        
         yield return new WaitForSeconds(4f);
