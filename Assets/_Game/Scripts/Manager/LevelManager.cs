@@ -13,16 +13,20 @@ public class LevelManager : Singleton<LevelManager>
     public int level = 1;
     private void Start()
     {
+        
         UIManager.Instance.OpenMainMenuUI();
+        //UIManager.Instance.OpenLoseUI();
         LoadLevel();
     }
     public void LoadLevel()
     {
+        SoundManager.Instance.PlaySound(Sound.InGame);
         LoadLevel(level);
         OnInit();
     }
     public void LoadLevel(int indexLevel)
     {
+      
         UIManager.Instance.SetNextLevelText(indexLevel);
         if (currentLevel != null)
         {

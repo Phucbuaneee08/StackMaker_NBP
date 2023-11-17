@@ -57,19 +57,23 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\_Game\Scripts\Level.cs" />
-    <Compile Include="Assets\_Game\Scripts\CameraFL.cs" />
-    <Compile Include="Assets\_Game\Scripts\Stack.cs" />
+    <Compile Include="Assets\_Game\Scripts\GamePlay\CountDown.cs" />
+    <Compile Include="Assets\_Game\Scripts\GamePlay\Level.cs" />
+    <Compile Include="Assets\_Game\Scripts\GamePlay\CameraFL.cs" />
+    <Compile Include="Assets\_Game\Scripts\GamePlay\Stack.cs" />
     <Compile Include="Assets\_Game\Scripts\Manager\UIManager.cs" />
-    <Compile Include="Assets\_Game\Scripts\Player.cs" />
+    <Compile Include="Assets\_Game\Scripts\GamePlay\Player.cs" />
     <Compile Include="Assets\_Game\Scripts\Manager\Singleton.cs" />
-    <Compile Include="Assets\_Game\Scripts\FinishStack.cs" />
-    <Compile Include="Assets\_Game\Scripts\Enum.cs" />
+    <Compile Include="Assets\_Game\Scripts\GamePlay\FinishStack.cs" />
+    <Compile Include="Assets\_Game\Scripts\GamePlay\Enum.cs" />
+    <Compile Include="Assets\_Game\Scripts\GamePlay\LightningWall.cs" />
+    <Compile Include="Assets\_Game\Scripts\GamePlay\Const.cs" />
     <Compile Include="Assets\_Game\Scripts\Manager\GameManager.cs" />
-    <Compile Include="Assets\_Game\Scripts\Control.cs" />
+    <Compile Include="Assets\_Game\Scripts\GamePlay\Control.cs" />
+    <Compile Include="Assets\_Game\Scripts\GamePlay\PointText.cs" />
     <Compile Include="Assets\_Game\Scripts\Manager\LevelManager.cs" />
     <Compile Include="Assets\_Game\Scripts\Manager\SoundManager.cs" />
-    <Compile Include="Assets\_Game\Scripts\EndStack.cs" />
+    <Compile Include="Assets\_Game\Scripts\GamePlay\EndStack.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

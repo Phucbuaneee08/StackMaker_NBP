@@ -9,10 +9,12 @@ public class UIManager : Singleton<UIManager>
     [SerializeField] private GameObject finishUI;
     [SerializeField] private GameObject mainMenuUI;
     [SerializeField] private GameObject gamePlay;
+    [SerializeField] private GameObject LoseUI;
     [SerializeField] private Image rollEffect;
     [SerializeField] private Text currentLevel;
     [SerializeField] private Text nextLevel;
-    // Start is called before the first frame update
+    [SerializeField] private CountDown countDown;
+
 
     private bool isActive;
 
@@ -20,14 +22,20 @@ public class UIManager : Singleton<UIManager>
     {
         coinText.text = "0";
         isActive = false;
+       
     }
 
     void Start()
     {
         OnInit();
     }
+    public void StartCountDown()
+    {
+        countDown.StartCountDown();
+    }
     public void SetNextLevelText(int level)
     {
+        LoseUI.SetActive(false);
         nextLevel.text = "Level " + level.ToString();
     }
     public void SetCoin(int coin)
@@ -50,6 +58,12 @@ public class UIManager : Singleton<UIManager>
         mainMenuUI.SetActive(true);
 
     }
+    public void OpenLoseUI()
+    {
+        LoseUI.SetActive(true);
+        StartCountDown();
+    }
+   
     public void OpenGamePlay()
     {
         gamePlay.SetActive(true);
@@ -87,7 +101,7 @@ public class UIManager : Singleton<UIManager>
 
         }
     }
-    // Update is called once per frame
+
     void Update()
     {
         if (isActive)
