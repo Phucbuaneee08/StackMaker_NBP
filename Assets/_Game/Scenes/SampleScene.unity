@@ -5022,7 +5022,7 @@ MonoBehaviour:
   soundRemoveBrick: {fileID: 8300000, guid: 739520d63f946044d9250ee435b2e368, type: 3}
   soundWin: {fileID: 8300000, guid: 9ba3612d7c70a1746baf93c7c18eeab8, type: 3}
   soundLose: {fileID: 8300000, guid: 83e07cdea80974a43b140ce354598baa, type: 3}
-  soundInGame: {fileID: 8300000, guid: d82b936ddb9db9b478936646f5d50b24, type: 3}
+  soundInGame: {fileID: 8300000, guid: a2cd90f4ce733c148a721bb8791df06a, type: 3}
   audioSource: {fileID: 0}
 --- !u!1 &1518029522320325 stripped
 GameObject:

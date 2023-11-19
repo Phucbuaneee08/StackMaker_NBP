@@ -73,14 +73,16 @@ public class Player : MonoBehaviour
         SoundManager.Instance.StopSound();
         SoundManager.Instance.PlaySound(Sound.Win);
         yield return new WaitForSeconds(3f);
-        UIManager.Instance.OpenFinishUI();
+        LevelManager.Instance.OnFinish();
     }
 
     public void RemoveStack()
     {
-        if (stacks.Count == 0)
+        if (stacks.Count == 0 && GameManager.Instance.IsState(GameState.GamePlay))
         {
-            UIManager.Instance.OpenFinishUI();
+            SoundManager.Instance.PlaySound(Sound.Win);
+            UIManager.Instance.SetPoint(coin * 100);
+            LevelManager.Instance.OnFinish();
         }
         else
         {

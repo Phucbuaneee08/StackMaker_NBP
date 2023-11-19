@@ -93,7 +93,6 @@ public class UIManager : Singleton<UIManager>
             LevelManager.Instance.NextLevel();
             GameManager.Instance.ChangeState(GameState.MainMenu);
             StartNewGame();
-            
         }
         else
         {

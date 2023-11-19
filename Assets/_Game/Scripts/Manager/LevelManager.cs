@@ -20,6 +20,7 @@ public class LevelManager : Singleton<LevelManager>
     }
     public void LoadLevel()
     {
+        SoundManager.Instance.StopSound();
         SoundManager.Instance.PlaySound(Sound.InGame);
         LoadLevel(level);
         OnInit();
